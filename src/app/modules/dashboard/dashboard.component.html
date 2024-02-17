@@ -1,0 +1,16 @@
+<div class="dashboard">
+  <h2>Cotización del dólar</h2>
+  <button mat-flat-button color="accent" (click)="obtenerDolares()">Obtener Info</button>
+  <div *ngIf="dolares">
+    <div *ngFor="let dolar of dolares">
+      <h3>{{ dolar.nombre }}</h3>
+      <p>Compra: {{ dolar.compra }}</p>
+      <p>Venta: {{ dolar.venta }}</p>
+      <p>Fecha de Actualización: {{ dolar.fechaActualizacion | date }}</p>
+      <hr>
+    </div>
+  </div>
+  <div *ngIf="!dolares">
+    <p>Cargando...</p>
+  </div>
+</div>
