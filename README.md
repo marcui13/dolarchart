@@ -1,37 +1,29 @@
-# Angular
+# Dolarchart
 
-This directory is a brief example of an [Angular](https://angular.io/) app that can be deployed to Vercel with zero configuration.
+Dolarchart es una aplicación web desarrollada con Angular que muestra las cotizaciones del dólar en Argentina. Permite al usuario visualizar diferentes tipos de cotizaciones de dólar obtenidas de la API dolarapi.com.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
+## Características
 
-## Deploy Your Own
+- Muestra las cotizaciones del dólar en diferentes categorías (oficial, blue, bolsa, etc.).
+- Permite al usuario cambiar entre los temas oscuro y claro para personalizar la apariencia de la aplicación.
+- Utiliza componentes de Angular Material para una interfaz de usuario moderna y receptiva.
 
-Deploy your own Angular project with Vercel.
+## Instalación
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/angular&template=angular)
+1. Clona este repositorio en tu máquina local.
+2. Ejecuta `npm install` para instalar todas las dependencias del proyecto.
+3. Ejecuta `ng serve` para iniciar el servidor de desarrollo. Navega a `http://localhost:4200/` en tu navegador para ver la aplicación.
 
-_Live Example: https://angular-template.vercel.app_
+## Uso
 
-## Development server
+Una vez que la aplicación esté en funcionamiento, podrás ver las cotizaciones del dólar en la pantalla principal. Puedes cambiar entre los temas oscuro y claro haciendo clic en el botón "Toggle Theme" en la esquina superior derecha.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Contribución
 
-## Code scaffolding
+Las contribuciones son bienvenidas. Si deseas contribuir a este proyecto, sigue estos pasos:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/feature-name`).
+3. Realiza tus cambios y haz commit de ellos (`git commit -am 'Add new feature'`).
+4. Sube tus cambios a la rama (`git push origin feature/feature-name`).
+5. Crea un nuevo Pull Request.
