@@ -1,28 +1,36 @@
 // ANGULAR
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // SERVICES
 import { DolarService } from 'src/app/core/services/dolar.service';
+import { ThemeService } from 'src/app/core/services/theme.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   public dolares: any;
+  public isDarkTheme: boolean = false;
 
-  constructor(private dolarService: DolarService) {}
+  constructor(
+    private dolarService: DolarService,
+    private themeService: ThemeService
+  ) {}
 
   ngOnInit(): void {
-    this.obtenerDolares();
+    this.initTheme();
+    this.fetchDolares();
   }
 
-  obtenerDolares() {
-    this.dolares = [];
+  private initTheme(): void {
+    this.isDarkTheme = this.themeService.isDarkThemeActive();
+  }
+
+  private fetchDolares(): void {
     this.dolarService.obtenerDolares().subscribe(
       (data) => {
         this.dolares = data;
-        console.log(this.dolares);
       },
       (error) => {
         console.error('Error al obtener la cotización del dólar:', error);

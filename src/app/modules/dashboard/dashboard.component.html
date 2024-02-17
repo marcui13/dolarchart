@@ -1,16 +1,17 @@
-<div class="dashboard">
-  <h2>Cotización del dólar</h2>
-  <button mat-flat-button color="accent" (click)="obtenerDolares()">Obtener Info</button>
-  <div *ngIf="dolares">
-    <div *ngFor="let dolar of dolares">
-      <h3>{{ dolar.nombre }}</h3>
-      <p>Compra: {{ dolar.compra }}</p>
-      <p>Venta: {{ dolar.venta }}</p>
-      <p>Fecha de Actualización: {{ dolar.fechaActualizacion | date }}</p>
-      <hr>
-    </div>
-  </div>
-  <div *ngIf="!dolares">
-    <p>Cargando...</p>
-  </div>
+<div class="dashboard" [ngClass]="{ 'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme }">
+  <h1 class="dashboard-title">Dolar Chart Dashboard</h1>
+  <mat-grid-list cols="4" rowHeight="150px">
+    <mat-grid-tile *ngFor="let dolar of dolares">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>{{ dolar.nombre }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Compra: {{ dolar.compra }}</p>
+          <p>Venta: {{ dolar.venta }}</p>
+          <p>Fecha de Actualización: {{ dolar.fechaActualizacion | date: 'short' }}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
