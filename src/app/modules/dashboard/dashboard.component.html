@@ -1,7 +1,7 @@
 <div class="dashboard" [ngClass]="{ 'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme }">
   <h1 class="dashboard-title">Dolar Chart Dashboard</h1>
-  <mat-grid-list cols="4" rowHeight="150px">
-    <mat-grid-tile *ngFor="let dolar of dolares">
+  <mat-grid-list [cols]="gridColumns" rowHeight="150px">
+    <mat-grid-tile *ngFor="let dolar of dolaresArray">
       <mat-card class="card">
         <mat-card-header>
           <mat-card-title>{{ dolar.nombre }}</mat-card-title>
